@@ -1,0 +1,327 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    /* overflow : hidden; */
+}
+
+.bg-image {
+    background: url("../images/background-dark.jpg");
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.main_box {
+    position: absolute;
+    background-color: var(--bs-white);
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+    transform: translate(-50%, -50%);
+    padding: 30px 50px;
+}
+
+.main_box .logo {
+    width: 415px;
+}
+
+.main_box .chrome_img {
+    width: 200px;
+}
+
+.main_box h1 {
+    font-size: 40px;
+    font-weight: 600;
+    color: #000;
+    margin-top: 40px;
+}
+
+.main_box ul {
+    margin-left: 200px;
+}
+
+.main_box ul li {
+    list-style: none;
+    color: #666666;
+    margin: 10px 0px;
+    font-size: 16px;
+}
+
+.main_box ul li span {
+    font-weight: 600;
+}
+
+.main_box p {
+    font-size: 16px;
+    margin: 20px 0;
+}
+
+.main_box a {
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.main_box .btn {
+    text-decoration: none;
+    display: inline-block;
+    padding: 30px 100px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, .2);
+    background: #54b723;
+    border-radius: 12px;
+    transition: all .3s ;
+    margin-bottom: 15px;
+    margin: 10px 150px;
+}
+
+.main_box .btn:hover {
+    background-color: #3e9be0;
+    transform: scale(1.1);
+}
+
+.tb-popup-template * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.tb-popup-template {
+    position: fixed;
+    /* display: none; */
+    z-index: 99999;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+.tb-popup {
+    max-width: 500px;
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 2px 25px 0 rgba(0, 0, 0, .25);
+    background-color: #fff;
+    text-align: center;
+    position: relative;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 100px;
+    margin: auto;
+}
+
+.tb-popup h2 {
+    letter-spacing: .15px;
+    color: #324148;
+    font-weight: 700;
+    font-size: 27px;
+    margin : 0;
+    line-height : 25px;
+}
+
+.tb-popup h2 .color-txt {
+    color: #1a73e8;
+}
+
+.tb-popup div#wave {
+    position: relative;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    border-radius: 4px;
+    background-color: #1a73e8;
+    max-width: 401px;
+    margin-top: 65px;
+    padding: 40px;
+}
+
+.tb-popup div#wave .dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 17px;
+    background: #fff;
+    animation: wave 1.3s linear infinite;
+}
+
+
+.tb-popup-overlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    animation: fade .2s linear forwards;
+}
+
+.tb-popup div#wave .dot:nth-child(2) {
+    animation-delay: -1.1s;
+}
+
+.tb-popup div#wave .dot:nth-child(3) {
+    animation-delay: -.9s;
+}
+
+.tb-popup div#wave .dot:nth-child(4) {
+    animation-delay: -.5s;
+}
+
+.tb-popup div#wave .dot:nth-child(5) {
+    animation-delay: -.3s;
+}
+
+#install-overlay {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99998;
+    background: black;
+    position: fixed;
+    opacity: .9;
+    pointer-events: none;
+    display: none;
+  }
+
+  .confirm {
+    position: fixed;
+    width: 500px;
+    height: 200px;
+    background: #fff;
+    z-index: 100000;
+    top: 50%;
+    left: 50%;
+    margin: -100px 0 0 -250px;
+    border:solid 2px #ccc;
+    display:none;
+  }
+  .confirm p {
+    font-size: 23px;
+    color: #010101;
+    font-weight: normal;
+    line-height: 29px;
+    margin: 20px 0 0 20px;
+    text-align: left;
+  }
+  .confirm .actions {
+    text-align: right;
+    margin: 50px 20px 0 0;
+  }
+  .confirm .actions .btn {
+    background: #f3f2f2;
+    border: 1px solid #acacac !important;
+    font-size: 24px;
+    margin-left: 20px;
+    color: #000 !important;
+    font-weight: normal;
+    border-radius: 5px;
+    padding:6px 35px;
+    text-decoration: none;
+  }
+  .confirm .actions .btn.blue {
+      border: solid 1.7px rgba(24, 73, 198, 0.55) !important;
+      background: #498cfe;
+      color: #fff !important;
+  }
+
+  .footer {
+    width: 100%;
+    padding-top: 20px;
+    color: white;
+    position: fixed;
+    bottom: 0px;
+    /*background-color: #7E7E7E;*/
+}
+.footer-container {
+    /* margin-left: auto; */
+    margin-right: 20px;
+    /* width: 960px; */
+    text-align: right;
+    color: white;
+}
+.footer-source {
+    margin-top: 25px
+}
+
+.le-nav{
+    border-bottom-style: none;
+    text-decoration: !important none;
+    font-family: Arial, sans-serif;
+    margin: auto;
+    float: none;
+    color: white;
+    font-weight: normal;
+    text-decoration: none;
+}
+.le-nav {
+    font-size: 12px;
+    /*margin: auto;*/
+    line-height: 17px;
+    margin-bottom: 10px;
+    float: right;
+    clear: both;
+    position: relative;
+    text-decoration: none;
+}
+.le-nav u, u:hover {
+    text-decoration: none !important;
+}
+.le-nav ul {
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    display: inline-block;
+    text-decoration: none;
+}
+.le-nav ul li {
+    display: inline-block;
+    text-decoration: none;
+}
+.le-nav p {
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    text-decoration: none;
+}
+.le-nav-left {
+    position: relative;
+    float: left;
+    display: block;
+    margin: auto;
+    text-decoration: none;
+    margin-right: 0px;
+}
+.le-nav-right {
+    position: relative;
+    float: right;
+    display: block;
+    text-decoration: none;
+    margin: auto;
+}
+.le-nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+.le-nav ul li a:hover {
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+}
+.le-nav-sub {
+    clear: both;
+    /*text-align: center;*/
+    text-decoration: none;
+}

